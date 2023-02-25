@@ -1,3 +1,65 @@
+@import url("https://fonts.cdnfonts.com/css/a-otf-shin-go-pro");
+
+:root {
+  --wii-border-radius-action: 8px;
+  --wii-border-width-action: 2px;
+
+  --wii-colors-action-background-idle: #d1e6e6;
+  --wii-colors-action-background-idle-inset-shadow: #afccd4;
+  --wii-colors-action-background-idle-sheen-top: #f1f6f6;
+  --wii-colors-action-background-idle-sheen-bottom: #c2dde5;
+
+  --wii-colors-action-background-active: #94e0e5;
+  --wii-colors-action-border: #153b50;
+  --wii-colors-action-text: #000101;
+}
+
 .wii-btn {
-  border-radius: 8px;
+  width: 100%;
+
+  font-family: "A-OTF Shin Go Pro", sans-serif;
+  font-size: larger;
+  color: var(--wii-colors-action-text);
+
+  border-width: var(--wii-border-width-action);
+  border-color: var(--wii-colors-action-border);
+  border-radius: var(--wii-border-radius-action);
+
+  background-color: var(--wii-colors-action-background-idle);
+  box-shadow: inset 0 0 6px 8px
+    var(--wii-colors-action-background-idle-inset-shadow);
+
+  cursor: pointer;
+
+  position: relative;
+}
+
+.wii-btn:after {
+  content: "";
+  display: block;
+  position: absolute;
+
+  height: 8px;
+  width: 98%;
+  border-radius: 40px;
+
+  background: var(--wii-colors-action-background-idle-sheen-top);
+
+  top: 2px;
+  left: 1%;
+}
+
+.wii-btn::before {
+  content: "";
+  position: absolute;
+  display: block;
+
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  border-radius: var(--wii-border-radius-action);
+
+  box-shadow: inset 0px -6px 0px 0px var(--wii-colors-action-background-idle-sheen-bottom);
 }

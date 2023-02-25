@@ -2,7 +2,7 @@
   "name": "wii-sports-css",
   "version": "0.0.1",
   "scripts": {
-    "start": "browser-sync start --server --serveStatic \"public\"",
+    "start": "browser-sync start --server --files \"./public/*\" --ss \"public\"",
     "format": "prettier --write ."
   },
   "devDependencies": {
